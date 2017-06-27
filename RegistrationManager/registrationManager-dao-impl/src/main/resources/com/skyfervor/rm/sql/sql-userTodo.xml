@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="userTodo-query-list">
+        <![CDATA[
+			SELECT
+				userTodoId,
+				todoContent,
+				todoStatus,
+				bdUserId,
+				bdUserName,
+				associatedDataId,
+				readTime
+			FROM UserTodo
+			WHERE
+				enumDataEntityStatus = 0
+				#if($bdUserId)
+					AND bdUserId = :bdUserId
+				#end
+				#if($todoStatus)
+					AND todoStatus = :todoStatus
+				#end
+				#if($associatedDataId)
+					AND associatedDataId = :associatedDataId
+				#end
+			ORDER BY lastUpdateTime DESC
+		]]>
+	</query>
+
+</dynamic-hibernate>

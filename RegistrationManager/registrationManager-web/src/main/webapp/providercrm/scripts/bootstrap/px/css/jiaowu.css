@@ -1,0 +1,602 @@
+/*!
+ * pxjy master-layout v1.0.1 (http://pxjy.com)
+ * Copyright 2015-2016 pxjy, Inc.
+ * author sinn-wu
+ */
+/* 閺佹瑥濮焎ss,閺佹瑥濮熸稉锟芥禍娑氬濞堝﹦娈戦弽宄扮础*/
+
+/**
+*
+*/
+/*闁瀚ㄩ崨銊ュ坊閻ㄥ嫭鐗卞锟�*/
+.form-group-px .fa-border {
+    padding: 0.4em 2em 0.45em;
+    border: 0.1em solid #EEE;
+    border-radius: 0.3em;
+    color: #333;
+    text-decoration: none;
+}
+.form-group-px .week-opiton >a:hover,a:active {
+    border-color: #f00000;
+}
+
+/*娑擃亝锟窖冨閹躲儳褰幒鎺曨嚦閺嶅嘲绱�*/
+.arrange_list{
+	line-height: 32px;
+}
+.arrange_list h3{
+	display: inline-block;
+	line-height: 32px;
+	padding-right: 40px;
+	font-weight: normal;
+	width: 240px;
+	text-align: right;
+	margin: 0;
+}
+.arrange_list .list_info{
+	padding-right: 35px;
+	font-size: 14px;
+	line-height: 32px;
+}
+.arrange_list em{
+	font-style: normal;
+	padding-left: 10px;
+}
+.arrange_list .list_desc{
+	display: inline-block;
+	width: 240px;
+	padding-right: 40px;
+	text-align: right;
+}
+
+.class_list_info{
+	padding-top: 30px;
+}
+.class_item >button{
+	float: left;
+	margin-left: 10px;
+	width:100px;
+	font-size: 12px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.item_info_list{
+	float: left;
+	margin-left: 20px;
+	width: 65%;
+}
+.item_info_list .dateinput{
+	width: 50%;
+	display: inline-block;
+}
+.item_info_list input.class_time{
+	width: 50px;
+	display: inline-block;
+}
+
+
+.class_item .progress{
+	margin-top: 10px;
+	height: 5px;
+	margin-bottom: 0;
+}
+
+/*閹烘帞褰拠鎹愩��*/
+.class_time_table{
+	margin: 10px 30px 30px 0;
+	border: 1px solid #ccc;
+}
+/*鐠嬪啳顕崇悰銊ф畱閸愬懎顔�*/
+.adjust-class-slot .class_time_table{
+    border: 0px;
+}
+/*.class_time_table .table > tbody > tr >td >button{
+    max-width: 88px;
+    text-align: center;
+    margin: 0px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.adjust-class-slot .class_time_table .table > tbody > tr >td >button >div{
+    font-size: 12px;
+    max-width: 60px;
+    text-align: center;
+    margin: 0px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow: ellipsis;
+}*/
+
+.adjust-class-slot .class_time_table .table > tbody > tr >td >a >div{
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.class_time_table .table .popover {
+    width: 200px;
+}
+.class_time_table .table > tbody > tr > th,.class_time_table .table > tbody > tr > td{
+	border-top: none;
+}
+.class_time_table .table > tbody > tr > td{
+	padding: 2px;
+	vertical-align: middle;
+}
+.class_time_table .table > tbody > tr > td:first-child{
+	text-align: right;
+	padding-right: 8px;
+}
+.class_time_table .table > tbody > tr > td:last-child{
+	padding-right: 10px;
+}
+.class_time_table .table > tbody > tr > th{
+	text-align: center;
+}
+.class_time_table .table > tbody > tr > td button{
+	width: 100%;
+    height: 40px;
+	border: none;
+	outline: none;
+}
+.class_time_table .table .btn-white{
+	border:1px #ddd solid;
+}
+.class_time_table .table > tbody > tr > td a{
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 0px;
+}
+.class_time_table .table > tbody > tr > td a.btn:hover{
+    background-position:0px;
+}
+.class_time_table .table > tbody > tr > td a.btn-danger:active{
+    color: #fff;
+    background-image: linear-gradient(to bottom, #EA4843 0%, #E31510 100%);
+    background-repeat: repeat-x;
+    border-color: #E31510;
+}
+.class_time_table .table > tbody > tr > td a.btn-primary:active{
+    color: #FFF;
+    background-color: #3276B1;
+    border-color: #285E8E;
+}
+.adjust-class-slot .class_time_table .table > tbody > tr >td >a >span{
+    font-size: 9px;
+    text-align: center;
+    margin: 0px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+.adjust-class-slot .class_time_table .table > tbody > tr >td >div{
+    border: none;
+    outline: none;
+}
+.class_totle_info{
+	line-height: 34px;
+	padding-bottom:40px;
+}
+.class_totle_info span{
+	padding-left: 35px;
+}
+.class_totle_info button{
+	margin-right: 30px;
+}
+/*閹恒劏宕橀弫娆忕瑎閸掓銆冮弽宄扮础*/
+.teacher_row{
+	border-top: 1px solid #ccc;
+	padding-bottom: 40px;
+}
+.teacher_row:first-child{
+	border-top: none;
+}
+.teacher_rd_title{
+	font-size: 18px;
+	padding-top: 10px;	
+}
+.teacher_rd_title strong{
+	color: #007dd5;
+	font-weight: normal;
+	font-size: 24px;
+}
+.teacher_rd_middle{
+	padding-top: 10px;	
+}
+.teacher_rd_middle >h3>a{
+	margin-right: 30px;	
+	font-size: 16px;
+	color: #555;
+	text-decoration: none;
+}
+.teacher_rd_middle >h3>a:active,
+.teacher_rd_middle >h3>a:hover{
+	color: #007DD5;
+}
+.teacher_rd_search{
+	margin-top: 15px;
+}
+
+.teacher_row_list{
+	list-style: none;
+	width: 33.3%;
+	padding: 20px 0;
+}
+
+.teacher_row_list.teacher_part_time .teacher_avator::after{
+	content: '閸忥拷';
+	display: block;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	background: #d9534f;
+	border-radius: 50%;
+	color: #fff;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+.teacher_row_list .teacher_avator{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+.teacher_row_list .teacher_avator span{
+	border-radius: 50%;
+	position: absolute;
+	display: none;	
+	width: 120px;
+	height: 120px;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	padding-top: 80px;
+	border: 4px solid #d9534f;
+	background: rgba(188,98,98,0.3);
+	color: #fff;
+	/*2px 2px 1px red, -2px -2px 1px red, -2px 2px 1px red, 2px -2px 1px red*/
+	-webkit-text-shadow: 3px 3px 3px #d9534f,-3px -3px 3px #d9534f,-3px 3px 3px #d9534f,3px -3px 3px #d9534f,3px 3px 3px #d9534f,-3px -3px 3px #d9534f,-3px 3px 3px #d9534f,3px -3px 3px #d9534f;
+	        text-shadow: 3px 3px 3px #d9534f,-3px -3px 3px #d9534f,-3px 3px 3px #d9534f,3px -3px 3px #d9534f,3px 3px 3px #d9534f,-3px -3px 3px #d9534f,-3px 3px 3px #d9534f,3px -3px 3px #d9534f;
+}
+
+.teacher_row_list.checked .teacher_avator span,.teacher_row_list .teacher_avator:hover span{
+	display: block;
+}
+.teacher_row_list .teacher_info{
+	padding-left: 20px;
+}
+.teacher_row_list .teacher_name{
+	font-size: 18px;
+	line-height: 30px;
+}
+.teacher_row_list .teacher_name em{
+	color: #3fad46;
+	font-style: normal;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.teacher_row_list .teacher_class{
+	line-height: 24px;
+	color: #999;
+}
+.teacher_row_list .class_percent{
+	color: #ffae00;
+	font-size: 24px;
+}
+.teacher_row_list.checked .teacher_name,.teacher_row_list.checked .teacher_name em,.teacher_row_list.checked .teacher_class,.teacher_row_list.checked .class_percent,.teacher_row_list:hover .teacher_name,.teacher_row_list:hover .teacher_name em,.teacher_row_list:hover .teacher_class,.teacher_row_list:hover .class_percent{
+	color: #d9534f;
+}
+
+.class_setting{
+	width: 130px;
+	margin: 20px auto 45px;
+}
+.class_setting button{
+	width: 100%;
+}
+
+
+/*婢堆呭疆閹烘帟顕虫い鐢告桨閺嶅嘲绱�*/
+.big_class_arrange{
+	padding: 30px 0;
+}
+.arrange_list_label{
+	display: inline-block;
+	/*width: 100px;*/
+	font-size: 14px;
+	font-weight: normal;
+}
+.form-group .class_time{
+	background: none;
+    margin-right: 10px;
+}
+.form-group .class_time:hover,
+.form-group .class_time.checked{
+	border: 2px solid #e31510;
+	padding: 4px 10px;
+}
+
+.class_list_info .class_time:hover,
+.form-class_list_info .class_time.checked{
+	border: 1px solid #ddd;
+	padding: 4px 10px;
+}
+
+.form-group .add_class_time{
+	padding-left: 60px;
+	line-height: 30px;
+	position: relative;
+	color: #000;
+}
+.form-group .add_class_time span{
+	position: absolute;
+	left: 20px;
+	top: -7px;
+	background: #5bc0de;
+	border: 1px solid #0a95cc;
+	font-weight: bold;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 4px;
+}
+.form-group .add_class_time span::before{
+	content: '';
+	display: inline-block;
+	width: 17px;
+	height: 3px;
+	background: #fff;
+	position: absolute;
+	left: 6px;
+	top: 13px;
+}
+.form-group .add_class_time span::after{
+	content: '';
+	display: inline-block;
+	width: 3px;
+	height: 17px;
+	background: #fff;
+	position: absolute;
+	left: 13px;
+	top: 6px;
+}
+.big_class_arrange .form-group .arrange_sm_txt{
+	width: 95px;
+}
+.form-group .inline_label{
+	display: inline-block;
+	margin-left: 40px;
+}
+.cr_list{
+	display: inline-block;
+}
+.form-group .classroom_size{
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 100px;
+	/*line-height: 54px;*/
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	color: #000;
+	position: relative;
+	vertical-align: middle;
+
+}
+.form-group .classroom_size .classroomname{
+	margin-top:10px;
+	margin-bottom:5px;
+	margin-left: 10px 10px 5px 10px;
+	padding: 5px;
+	height: 50px;
+}
+.form-group .classroom_size:hover,.form-group .classroom_size.checked{
+	border: 2px solid #e31510;
+	text-decoration: none;
+}
+.form-group .classroom_size:hover::after,.form-group .classroom_size.checked::after{
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	background: #e31510 url(../images/sprite_bg.png) no-repeat 0 0;
+}
+.form-group .classroom_size strong{
+	font-size: 16px;
+	font-weight: normal;
+}
+.form-group .classroom_size span{
+	font-size: 12px;
+}
+.class_time_div >span{
+    margin-right: 20px;
+}
+
+.big_class_arrange .weekcustom >li >input{
+    margin-left: 20px;
+}
+
+.big_class_arrange .dropdown-menu{
+    width: 80px;
+    min-width: 80px;
+}
+.week_day_div {
+    margin-top: 10px;
+    /*display: none;*/
+}
+.week_day_div >span{
+    margin-right: 20px;
+}
+
+.textbookselected .alert{
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.textbookselected >div{
+    float: left;
+}
+.class_list_info .form-control{
+    height: 25px;
+}
+.class_list_info .class_item{
+    margin-bottom: 15px;
+}
+.adjustHead >div{
+    float: left;
+    margin-bottom: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+}
+.adjustHead >div >span{
+    margin-left: 20px;
+    font-size: 24px;
+    margin-right: 40px;
+}
+.adjustHead >div >input{
+    display: inline;
+    width: 300px;
+}
+.class-info-desc {
+    font-size: 14px;
+    margin: 30px 0px;
+}
+.class-info-desc label{
+    font-size:16px; margin-right:40px;
+}
+
+.color-desc {
+    font-size: 16px;
+    margin: 30px 0px;
+    text-align: right;
+    float: right;
+    /*margin: 20px 30px;*/
+}
+.color-desc >i {
+    margin-right: 10px;
+    margin-left: 30px;
+}
+.color-desc >i.red{
+    color: #E31510;
+}
+.color-desc >i.violet{
+    color: #b4009e;
+}
+.adjust-class-list  {
+	margin-top: 30px;
+}
+.getWeekIco{
+	text-align:center;
+	display:none;
+}
+.adjust-class-list >div >span{
+    margin-right: 20px;
+    font-size: 16px;
+}
+.adjust-class-list >div >button{
+    width: 145px;
+    margin-right: 15px;
+}
+.adjustTeacherPop >button{
+    width: 20px;
+    /*margin: 10px 20px;*/
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.forworddiv .rightArrow{
+    display: block;
+    position: fixed;
+    right: 5%;
+    bottom: 50%;
+    width: 30px;
+    padding: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+    color: #E8E8E8;
+    font-size: 30px;
+    text-align: center;
+}
+.forworddiv .leftArrow{
+    display: block;
+    position: fixed;
+    left: 5%;
+    bottom: 50%;
+    width: 30px;
+    padding: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+    color: #E8E8E8;
+    font-size: 30px;
+    text-align: center;
+}
+.forworddiv .arrow:hover{
+    color: #0C87D5 ;
+}
+
+.modal-content-px .textbooksearch >input{
+    margin-right: 20px;
+}
+/*娑擄拷鐞涘奔琚遍崚锟�*/
+.simpletable .tbody{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.simpletable .tbody >div {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.simpletable .tbody >div >dd{
+    float: left;
+    margin-right: 10px;
+}
+.simpletable .footer {
+    text-align: right;
+}
+.portrait {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  border-radius:50%; 
+  top: 0;
+  z-index: 1;
+}
+#recom_teacher{
+	margin-top:25px;
+	text-align:right;
+	margin-right:30px;
+}
+.f_left{
+	float:left;
+}
+#view_holiday,#createLessonBtn{
+	margin-left:15px;
+}

@@ -1,0 +1,57 @@
+
+/***-----------------------------wx modify_______________________________***/
+.nav-tabs > li > a > i {
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+    color: #000000;
+}
+.IndexUtilization > ul {
+    vertical-align: middle;
+    text-align: left;
+    overflow:hidden
+}
+.IndexUtilization > ul > i{
+    float: left;
+    margin-top: 20px;
+    list-style-type:none;
+
+}
+.IndexUtilization > ul > li{
+    margin-top: 20px;
+    line-height: 25px;
+}
+.alert-indexshotcut {
+    background-color: #fafafa;
+    border-color: #d4d4d4;
+    line-height: 50px;
+    box-shadow: 0 0 3px #000;
+}
+
+.alert-indexshotcut > i {
+    font-size: 18px;
+    color: #0066cc;
+    margin-bottom: 3px;
+}
+.alert-indexshotcut > n {
+    font-size: 25px;
+    margin-bottom: 3px;
+    color: #f00000;
+    margin-left: 10px;
+}
+.alert-indexshotcut > im {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.alert-indexshotcut > imj {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.indextitlecolor {
+    background-color: #F6F6F6;
+}

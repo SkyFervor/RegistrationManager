@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="activityUserMapping-query-list">
+		<![CDATA[
+			SELECT
+				activityUserMappingId,
+				activityId,
+				userId,
+				description,
+				applied,
+				applyTime
+			FROM ActivityUserMapping
+			WHERE
+				enumDataEntityStatus = 0
+				#if($activityId)
+					AND activityId = :activityId
+				#end
+				#if($userId)
+					AND userId = :userId
+				#end
+				#if($applied)
+					AND applied = :applied
+				#end
+			ORDER BY applyTime DESC
+		]]>
+	</query>
+		
+</dynamic-hibernate>

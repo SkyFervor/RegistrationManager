@@ -1,0 +1,167 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+	<id>web</id>
+
+	<formats>
+		<format>war</format>
+	</formats>
+
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<fileSets>
+		<fileSet>
+			<directory>../registrationManager-web/target/registrationManager-web</directory>
+			<outputDirectory>/</outputDirectory>
+			<excludes>
+				<exclude>WEB-INF/classes/bean/**</exclude>
+				<exclude>WEB-INF/lib/**</exclude>
+				<exclude>WEB-INF/classes/logback.xml</exclude>
+				<exclude>WEB-INF/web.xml</exclude>
+			</excludes>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+			<filtered>false</filtered>
+		</fileSet>
+		<fileSet>
+			<directory>src/resources/bean/common</directory>
+			<outputDirectory>WEB-INF/classes/bean</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+			<filtered>false</filtered>
+		</fileSet>
+		<fileSet>
+			<directory>src/resources/bean/web</directory>
+			<outputDirectory>WEB-INF/classes/bean</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+			<filtered>false</filtered>
+		</fileSet>
+		<fileSet>
+			<directory>src/resources/log/web</directory>
+			<outputDirectory>WEB-INF/classes</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+			<filtered>true</filtered>
+		</fileSet>
+		<fileSet>
+			<directory>src/resources/web/web</directory>
+			<outputDirectory>WEB-INF</outputDirectory>
+			<includes>
+				<include>**</include>
+			</includes>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+			<filtered>false</filtered>
+		</fileSet>
+	</fileSets>
+
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>WEB-INF/lib</outputDirectory>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+			<fileMode>0755</fileMode>
+			<includes>
+				<include>antlr:antlr:jar:2.7.6</include>
+				<include>aopalliance:aopalliance:jar:1.0</include>
+				<include>avalon:avalon-framework:jar:4.1.4</include>
+				<include>c3p0:c3p0:jar:0.9.1.2</include>
+				<include>ch.qos.logback:logback-classic:jar:1.0.13</include>
+				<include>ch.qos.logback:logback-core:jar:1.0.13</include>
+				<include>com.alibaba:dubbo-extend:jar:2.5.4-SNAPSHOT</include>
+				<include>com.alibaba:dubbo:jar:2.5.4-SNAPSHOT</include>
+				<include>com.alibaba:fastjson:jar:1.2.11</include>
+				<include>com.fasterxml.jackson.core:jackson-annotations:jar:2.6.0-rc3</include>
+				<include>com.fasterxml.jackson.core:jackson-core:jar:2.6.0-rc3</include>
+				<include>com.fasterxml.jackson.core:jackson-databind:jar:2.6.0-rc3</include>
+				<include>com.github.sgroschupf:zkclient:jar:0.1</include>
+				<include>com.google.code.gson:gson:jar:2.3.1</include>
+				<include>com.rabbitmq:amqp-client:jar:3.5.1</include>
+				<include>com.skyfervor.framework:framework-core:jar:1.0-SNAPSHOT</include>
+				<include>com.skyfervor.rm.framework:registrationManager-framework:jar:1.0-SNAPSHOT</include>
+				<include>com.skyfervor.rm.web.controller:registrationManager-controller:jar:1.0-SNAPSHOT</include>
+				<include>com.skyfervor.rm.vo:registrationManager-vo:jar:1.0-SNAPSHOT</include>
+				<include>com.skyfervor.rm.service:registrationManager-service:jar:1.0-SNAPSHOT</include>
+				<include>com.skyfervor.rm.service.impl:registrationManager-service-impl:jar:1.0-SNAPSHOT</include>
+				<include>com.whalin:Memcached-Java-Client:jar:3.0.2</include>
+				<include>commons-beanutils:commons-beanutils:jar:1.8.3</include>
+				<include>commons-codec:commons-codec:jar:1.9</include>
+				<include>commons-collections:commons-collections:jar:3.2.1</include>
+				<include>commons-fileupload:commons-fileupload:jar:1.3</include>
+				<include>commons-io:commons-io:jar:2.2</include>
+				<include>commons-lang:commons-lang:jar:2.6</include>
+				<include>commons-net:commons-net:jar:3.3</include>
+				<include>commons-pool:commons-pool:jar:1.5.6</include>
+				<include>dom4j:dom4j:jar:1.6.1</include>
+				<include>javax.activation:activation:jar:1.1</include>
+				<include>javax.mail:mail:jar:1.4.7</include>
+				<include>javax.servlet:jstl:jar:1.2</include>
+				<include>javax.transaction:jta:jar:1.1</include>
+				<include>jline:jline:jar:0.9.94</include>
+				<!-- <include>junit:junit:jar:4.12</include> -->
+				<include>log4j:log4j:jar:1.2.16</include>
+				<include>mysql:mysql-connector-java:jar:5.1.35</include>
+				<include>net.sf.dozer:dozer:jar:5.5.1</include>
+				<include>org.apache.commons:commons-lang3:jar:3.2.1</include>
+				<!-- <include>org.apache.httpcomponents:httpclient:jar:4.3.5</include>
+				<include>org.apache.httpcomponents:httpcore:jar:4.3.2</include> -->
+				<include>org.apache.poi:poi:jar:3.12</include>
+				<!-- <include>org.apache.tomcat:tomcat-el-api:jar:8.0.23</include>
+				<include>org.apache.tomcat:tomcat-jsp-api:jar:8.0.23</include>
+				<include>org.apache.tomcat:tomcat-servlet-api:jar:8.0.23</include> -->
+				<include>org.apache.velocity:velocity:jar:1.6.4</include>
+				<include>org.apache.zookeeper:zookeeper:jar:3.3.3</include>
+				<include>org.aspectj:aspectjweaver:jar:1.6.8</include>
+				<include>org.eclipse.jetty:jetty-continuation:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-http:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-io:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-security:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-server:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-servlet:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty:jetty-util:jar:8.1.11.v20130520</include>
+				<include>org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016</include>
+				<!-- <include>org.hamcrest:hamcrest-core:jar:1.3</include> -->
+				<include>org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final</include>
+				<include>org.hibernate:hibernate-core:jar:3.6.3.Final</include>
+				<include>org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final</include>
+				<include>org.javassist:javassist:jar:3.15.0-GA</include>
+				<include>org.jboss.netty:netty:jar:3.2.5.Final</include>
+				<include>org.logback-extensions:logback-ext-spring:jar:0.1.1</include>
+				<include>org.slf4j:jcl-over-slf4j:jar:1.7.5</include>
+				<include>org.slf4j:slf4j-api:jar:1.7.5</include>
+				<include>org.springframework.amqp:spring-amqp:jar:1.4.5.RELEASE</include>
+				<include>org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE</include>
+				<include>org.springframework.retry:spring-retry:jar:1.1.2.RELEASE</include>
+				<include>org.springframework:spring-aop:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-beans:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-context-support:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-context:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-core:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-expression:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-jdbc:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-messaging:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-orm:jar:4.1.6.RELEASE</include>
+				<!-- <include>org.springframework:spring-test:jar:4.1.6.RELEASE</include> -->
+				<include>org.springframework:spring-tx:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-web:jar:4.1.6.RELEASE</include>
+				<include>org.springframework:spring-webmvc:jar:4.1.6.RELEASE</include>
+				<include>oro:oro:jar:2.0.8</include>
+				<include>redis.clients:jedis:jar:2.0.0</include>
+				<include>taglibs:standard:jar:1.1.2</include>
+
+			</includes>
+		</dependencySet>
+	</dependencySets>
+</assembly>

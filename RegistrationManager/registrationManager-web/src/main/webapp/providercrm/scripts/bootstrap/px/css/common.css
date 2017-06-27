@@ -1,0 +1,68 @@
+.message{font-size: 12px;z-index: 9999;text-align: center;top:-50px;-webkit-background-size: 40px 40px;-moz-background-size: 40px 40px;background-size: 40px 40px;-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);width: 100%;border: 1px solid;color: #fff;padding: 15px;position: fixed;_position: absolute;text-shadow: 0 1px 0 rgba(0,0,0,.5);-webkit-animation: animate-bg 5s linear infinite;-moz-animation: animate-bg 5s linear infinite;}
+.msg-info{background-color: #4ea5cd;border-color: #3b8eb5;}
+.msg-error{background-color: #d74c46;border-color: #c43d3d;}
+.msg-warning{background-color: #d74c46;border-color: #d74c46;}
+.msg-success{background-color: #5cb85c;border-color: #55a12c;}
+.message h3{margin: 0 0 5px 0;}
+.message p{margin: 0;}
+@-webkit-keyframes animate-bg{from{background-position: 0 0;}
+to{background-position: -80px 0;}
+}
+@-moz-keyframes animate-bg{from{background-position: 0 0;}
+to{background-position: -80px 0;}
+}
+.black_overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+.loading {
+    z-index: 1002;
+    display: none;
+    /*background-color: #fff;*/
+    /*border: 1px solid #f0f0f0;*/
+    position: fixed;
+    _position: absolute;
+    top: 144px;
+    left: 212px;
+    height: 255px;
+    width: 415px;
+    /*-webkit-box-shadow: #666 0px 0px 10px;*/
+    /*-moz-box-shadow: #666 0px 0px 10px;*/
+    /*box-shadow: #666 0px 0px 10px;*/
+    /*-moz-border-radius:20px;  */
+    /*-webkit-border-radius:20px;  */
+    /*border-radius:20px;  */
+}
+
+.loading .ball {
+    width: 100px;
+    margin: 50px auto 0;
+    position: relative;
+}
+.form-group .control-label label i{
+	color: #F00;
+    font-family: "SimSun";
+    padding:0 4px;
+    font-style: normal;
+    font-weight: normal;
+}
+.top30p {
+	top:30%;
+}
+h5.modal-title{
+	text-indent:3px;
+}
+#px-alert .modal-body{
+	font-size: 120%;
+}
+.margin-panel{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+#body-head{
+	text-indent:0;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="dictionaryType-query-list">
+		<![CDATA[
+			SELECT
+				dictionaryTypeId,
+				name,
+				description,
+				enumExtendInfo
+			FROM DictionaryType
+			WHERE
+				enumDataEntityStatus = 0
+				#if($dictionaryTypeId)
+					AND dictionaryTypeId = :dictionaryTypeId
+				#end
+				#if($name)
+					AND name = :name
+				#end
+				#if($enumExtendInfo)
+					AND enumExtendInfo = :enumExtendInfo
+				#end
+			ORDER BY dictionaryTypeId ASC
+		]]>
+	</query>
+</dynamic-hibernate>

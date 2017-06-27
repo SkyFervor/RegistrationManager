@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="activityReportSrc-query-list">
+		<![CDATA[
+			SELECT
+				i.activityId,
+				i.name AS activityName,
+				i.activityTime,
+				m.userId
+			FROM Activity i,
+				ActivityUserMapping m
+			WHERE
+				i.activityId = m.activityId
+				AND i.enumDataEntityStatus = 0
+				AND m.enumDataEntityStatus = 0
+				#if($applied)
+					AND m.applied = :applied
+				#end
+				#if($beginTime)
+					AND m.applyTime >= :beginTime
+				#end
+				#if($endTime)
+					AND m.applyTime < :endTime
+				#end
+			ORDER BY activityTime ASC
+		]]>
+	</query>
+	
+	<query name="activityReport-user-query-list">
+		<![CDATA[
+			SELECT
+				distinct userId,
+				userName
+			FROM ActivityReport
+			ORDER BY userName ASC
+		]]>
+	</query>
+	
+	<query name="activityReport-activity-query-list">
+		<![CDATA[
+			SELECT
+				distinct activityId,
+				activityName
+			FROM ActivityReport
+			ORDER BY activityTime DESC
+		]]>
+	</query>
+	
+	<query name="activityReport-query-list-byPerson">
+		<![CDATA[
+			SELECT
+				COUNT(userId) as count,
+				userName
+			FROM ActivityReport
+			WHERE
+				1 = 1
+				#if($beginTime)
+					AND activityTime >= :beginTime
+				#end
+				#if($endTime)
+					AND activityTime <= :endTime
+				#end
+				#if($idList)
+					AND userId IN :idList
+				#end
+			GROUP BY userId
+			ORDER BY userName ASC
+		]]>
+	</query>
+	
+	<query name="activityReport-query-list-byActivity">
+		<![CDATA[
+			SELECT
+				COUNT(activityId) as count,
+				activityName,
+				activityTime
+			FROM ActivityReport
+			WHERE
+				1 = 1
+				#if($beginTime)
+					AND activityTime >= :beginTime
+				#end
+				#if($endTime)
+					AND activityTime <= :endTime
+				#end
+				#if($idList)
+					AND activityId IN :idList
+				#end
+			GROUP BY activityId
+			ORDER BY activityTime ASC
+		]]>
+	</query>
+</dynamic-hibernate>

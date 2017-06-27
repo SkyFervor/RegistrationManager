@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="activity-query-list">
+		<![CDATA[
+			SELECT
+				activityId,
+				name,
+				type,
+				publisherId,
+				beginTime,
+				endTime,
+				activityTime,
+				status
+			FROM Activity
+			WHERE
+				enumDataEntityStatus = 0
+				#if($name)
+					AND name LIKE CONCAT('%', :name, '%')
+				#end
+				#if($type)
+					AND type = :type
+				#end
+				#if($publisherId)
+					AND publisherId = :publisherId
+				#end
+				#if($activityTime)
+					AND date(activityTime)=date(:activityTime)
+				#end
+				#if($status)
+					AND status = :status
+				#end
+			ORDER BY activityTime DESC
+		]]>
+	</query>
+</dynamic-hibernate>

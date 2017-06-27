@@ -1,0 +1,971 @@
+﻿/*!
+ * pxjy master-layout v1.0.1 (http://pxjy.com)
+ * Copyright 2015-2016 pxjy, Inc.
+ * author sinn-wu
+ */
+/* 列表特征页 */
+
+/**
+* 搜索区域样式
+* 每个行高为20px,左边标签默认站2个栅格，内容占8个栅格，操作站2个栅格
+* 默认字体为微软雅黑，字体大小为14
+*/
+/*复写头部标题，去掉下面的下划线*/
+
+.btn-width-default {
+    width: 100px;
+}
+.bottom15 {
+    margin-bottom: 15px;
+}
+.top15 {
+    margin-top: 15px;
+}
+.bordenbottom-1 {
+    border-bottom: 1px #ddd solid
+}
+.bordenbottom-dash-1 {
+    border-bottom: 1px #ddd dashed 
+}
+.bordentop-1 {
+    border-bottom: 1px #ddd solid
+}
+/*瀑布流式的列表*/
+.page-header-list >div{
+    float: left;
+    /*width: 50%;*/
+}
+.page-header-list .page-header {
+    border-bottom: 0;
+    width: 30%;
+}
+.page-header-list .page-header-right {
+    width: 70%;
+}
+.page-header-list .page-header-right{
+    text-align: right;
+}
+.page-header-list .page-header-right >button{
+    margin-left: 20px;
+}
+.panel-default > .panel-heading {
+    background-image: -webkit-linear-gradient(top, #fefefe 0%, #f2f2f2 100%);
+    background-image: -o-linear-gradient(top, #fefefe 0%, #f2f2f2 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f2f2));
+    background-image: linear-gradient(to bottom, #fefefe 0%, #f2f2f2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#fff2f2f2', GradientType=0);
+    background-repeat: repeat-x;
+}
+/*每行搜索条的样式*/
+#select .attr {
+    line-height: 25px;
+    margin: 0px 0px 0px 0px;
+    border-bottom: 1px dashed #DEDEDE;
+    clear:both;overflow:hidden;
+    /*position: relative;*/
+    /*height: 35px;*/
+}
+#select .attr:last-child {
+    border-bottom: none;
+}
+
+/*标签*/
+#select .select-label {
+    text-align: left;
+}
+
+/*不限的样式*/
+#select .attr .fvalues .v-fold .f-list .selectall{
+    vertical-align: middle;
+    margin-top: 3px;
+    width: 50px;
+    color: #fff;
+}
+/*搜索选项的字体样式*/
+#select .attr .fvalues .v-fold .f-list >a{
+    text-decoration: none;
+    display: inline-block;
+    /*margin: 0px 40px 11px 0px;*/
+    margin-top:3px;
+    padding:0 10px;
+    /*width: 80px;*/
+    max-width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    float: left;
+    color: #333;
+}
+
+#select .attr .fvalues .v-fold .f-list .selected {
+    color: #F3A02C;
+}
+/*默认值显示一行*/
+#select  .v-fold {
+    height: 20px;
+    white-space: nowrap;
+    /*overflow: hidden; update by cxd*/
+}
+/*去掉前面的点*/
+#select .v-fold >ul{
+    list-style: none;
+    float: left;
+}
+/*展开更多*/
+#select .v-unfold {
+    height: auto;
+}
+
+/*默认隐藏多选*/
+.multi-btn-cont{display:none}
+/*点击多选后显示*/
+.block-multi .multi-btn-cont {display:block; text-align:center}
+.block-multi .multi-btn-cont .cancel-btn,
+.block-multi .multi-btn-cont .submit-btn{
+    display:inline-block;
+    text-align:center;
+    text-decoration:none;
+    border-radius:2px;
+    margin:5px;
+    cursor:pointer
+}
+
+/*多选 点击切换选中状态*/
+.icon-btn-check-small,.icon-btn-check-small-hover {display:inline-block;*display:inline;*zoom:1;font-size:0;background:url(../images/tbicon-1.png);background-repeat:no-repeat;_background-image:url(../images/tbicon-1.png)}
+/*多选框样式*/
+.icon-btn-check-small {background-position:-435px -103px;width:13px;height:13px}
+.icon-btn-checked-small {background-position:-435px -126px;width:13px;height:13px}
+.icon-btn-check-small-hover,.icon-btn-check-small-parent-hover .icon-btn-check-small,.icon-btn-check-small-parent:hover .icon-btn-check-small,.icon-btn-check-small:hover,.icon-hover .icon-btn-check-small,.icon-tag:hover .icon-btn-check-small{background-position:-435px -126px;width:13px;height:13px}
+/*多选框默认不展示*/
+.param-checkbox {
+    display: none;
+}
+/*在点击多选的时候显示*/
+.block-multi .param-checkbox{display:inline-block;*display:inline;*zoom:1;margin:0 0px 0 0;}
+.block-multi .v-fold{
+    height: auto;
+}
+
+/*搜索的操作栏*/
+#select .attr .v-option{
+    text-align: right;
+}
+#select  .v-option >span {
+    float: left;
+    border: 1px solid #DAD9D9;
+    margin-right: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+#select  .v-option >a {
+    margin-right: 10px;
+}
+
+/*搜索条件更多*/
+#select .mb {
+    overflow: visible;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 0px none;
+    text-align: center;
+    font-size: 0px;
+}
+
+#select .mb .attr-extra {
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid #DDD;
+    border-width: 0px 1px 1px;
+    border-style: none solid solid;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    margin-top: -1px;
+    background: none repeat scroll 0% 0% #FFF;
+    line-height: 20px;
+    text-align: right;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ddd;
+}
+#select .mb .attr-extra >a {
+    color: #666;
+    margin: 0px 0px 0px 10px;
+    text-decoration: none;
+}
+#select .mb .attr-extra >a >i {
+    margin-left: 10px;
+}
+
+/*瀑布列表页面样式*/
+.tablelist-text-panel {
+    margin: 0px 10px;
+}
+
+
+.tablelist-text-panel .panel-sub-btn >button {
+    display: inline-block;
+    margin-right: 20px;
+    width: 100px;
+    margin-top: 10px;
+}
+.panel-tabs-px >ul >li >a{
+    color: #333;
+}
+
+.navtab-hidn {
+    display: none;
+}
+.navtab-show {
+    display: block;
+}
+/**
+ *FORM 表单页
+ * form-group-px 宽松版
+ * 行间距 20px;行高40px
+ */
+.modal-content-px .form-group-px {
+    margin: 20px 30px 20px 0px;
+    /*line-height: 40px;*/
+}
+.form-group-px {
+    margin: 40px 0px 40px 30px;
+    /*line-height: 40px;*/
+}
+.form-group-px .fl{
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    /*line-height: 40px;*/
+}
+/*重写选择样式*/
+.form-group-px .form-control{
+    width: auto;
+}
+/*横排样式- 右边间距间距5px */
+.form-group-px .form-ls-inoneline{
+     float: left;
+     margin-right: 15px;
+}
+
+
+/*选择周历的样式*/
+.form-group-px .fa-border {
+    padding: 0.4em 2em 0.45em;
+    border: 0.1em solid #EEE;
+    border-radius: 0.3em;
+    color: #333;
+    text-decoration: none;
+}
+.form-group-px .week-opiton >a:hover,a:active {
+    border-color: #f00000;
+}
+
+/*账号添加页面*/
+.form-group-px .head-ico >div {
+    margin-bottom: 10px;
+}
+.form-group-px .head-ico .btn-width-default {
+    margin-left: 20px;
+}
+.spaceRow50{
+    margin-top: 60px;
+}
+
+/*页面设置权限*/
+.webAuth .form-group-px {
+    margin: 25px 0px 0px 0px;
+}
+.webAuth .form-group .fa-border{
+    padding: 0.4em 2em 0.45em;
+    border: 0.1em solid #EEE;
+    border-radius: 0.3em;
+    color: #333;
+    text-decoration: none;
+    margin: 0px 20px 20px 0px;
+}
+.webAuth .form-group .selected,
+.webAuth .form-group >a:hover {
+    background-image: linear-gradient(to bottom, #51BBF5 0%, #0A95CC 100%);
+    background-repeat: repeat-x;
+    border-color: #0A95CC;
+    color: #fff;
+}
+.webAuth .btn-width-default{
+    margin-top: 20px;
+}
+/*设置权限页面 权限操作*/
+.webAuth .webtable {
+    margin: 15px 10px 20px 10px;
+}
+.webAuth .webtable >table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #DDD ;
+}
+.webAuth .webtable >table >thead{
+    border-bottom: 2px solid #DDD ;
+}
+.webAuth .webtable >table >thead >tr {
+    height: 40px;
+}
+.webAuth .webtable >table >tbody >tr {
+    height: 40px;
+}
+.webAuth .webtable >table >tbody >tr >td{
+    border: 1px solid #DDD ;
+}
+.webAuth .webtable >table >thead >tr >td{
+    border: 1px solid #DDD ;
+}
+.webAuth .webtable .menu{
+    text-indent: 35px;
+    width: 25%;
+    color: #333;
+}
+/*账号管理样式*/
+.input-search >div{
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #DEDEDE;
+}
+.input-search {
+    text-indent: 15px;
+}
+
+.input-search .form-control{
+    display: inline;
+    margin-left: 0px;
+    width: 200px;
+    height: 34px;
+    margin-right: 20px;
+}
+
+.input-search .btn{
+	text-indent: 0;
+    vertical-align: 0px ;
+}
+
+.input-search-muti {
+    /*text-indent: 15px;*/
+    margin-bottom: 20px;
+}
+
+.input-search-muti .form-control{
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    width: 150px;
+    height: 34px;
+    margin-right: 15px;
+}
+.input-search-muti >span{
+    display: inline;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 20px;
+}
+.input-search-muti .btn{
+    vertical-align: 0px ;
+}
+
+.webAuth .webtable .auth .uniform_on{
+    margin-left: 20px;
+}
+.webAuth .webtable .auth .uniform_on:first-child{
+    margin-left: 0px;
+}
+.webAuth .webtable .sub-menu .auth .uniform_on:first-child{
+    margin-left: 20px;
+}
+.webAuth .webtable .sub-menu{
+    background-color: #f9f9f9;
+}
+.webAuth .webtable .menu >a {
+    text-decoration: none;
+    color: #333;
+}
+.webAuth .webtable .menu .fa {
+    line-height: normal;
+}
+.webAuth .webtable .menu .fa-caret-right {
+    float: right;
+    margin-right: 10px;
+    color: #333;
+}
+.webAuth .webtable .menu .fa-circle {
+    float: left;
+    width: 20px;
+}
+.webAuth .webtable .auth{
+    text-indent: 25px;
+    width: 75%;
+}
+
+/*产品添加页面*/
+.form-group-px .addbtn {
+    /*margin-right: 15px;*/
+    /*position: absolute;*/
+    /*left: 20px;*/
+    /*top: -7px;*/
+    display: inline;
+    background: #5bc0de;
+    border: 1px solid #0a95cc;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.form-group-px .form-middle-text {
+    line-height: 30px;
+}
+
+/*共用样式cxd*/
+.mar-top-20{
+	margin-top:20px;
+}
+.table-striped th{
+	font-size:14px;
+}
+
+/*报名页面*/
+.pay-content .pay-search >div{
+    float: left;
+}
+.pay-content .pay-search{
+    height: 73px;
+    line-height: 73px;
+    /*margin-right: 2px;*/
+}
+.pay-content .pay-search .pay-search-ico >img{
+    width: 73px;
+    height: 73px;
+    line-height: 73px;
+    vertical-align: top;
+    text-align: left;
+    /*margin-bottom: 8px;*/
+    top: 0px;
+}
+.pay-content .pay-search-content{
+    height: 73px;
+    line-height: 73px;
+    width: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-color: #DDD;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 1.5px solid transparent;
+}
+
+.pay-content .pay-search-content >div {
+    float: left;
+}
+.pay-content .pay-search-content >div >label {
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.pay-content .pay-search-content .form-control {
+    display: inline-block;
+    margin-left: 20px;
+    height: 34px;
+    width:300px;
+}
+.pay-content .pay-search-content >div >button {
+    margin-left: 30px;
+}
+
+
+/*课程搜索*/
+.pay-content .course-content .course-key-search {
+    height: 40px;
+    line-height: 34px;
+    margin-bottom: 25px;
+}
+.pay-content .course-content .course-key-search >input{
+    width: 330px;
+    margin-right: 15px;
+}
+.pay-content .course-content .course-sel-search {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.pay-content .course-content .defaultdiv {
+    height: 34px;
+    line-height: 34px;
+}
+.course-content .course-sel-search .selectize-select{
+    float: left;
+    margin-right: 10px;
+}
+
+.course-content .course-searche {
+    margin-top: 15px;
+}
+.course-content .course-searche tr>td>a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.course-content .course-searche .fa-shopping-cart{
+    font-size: 18px;
+    margin-right: 2px;
+}
+.course-content .course-searche .shopingcartbtn >a:hover{
+    color: #f2af30;
+}
+.inoneline{
+    float: left;
+}
+.fontgreen {
+    color: #8dca8d;
+}
+.fontred {
+    color: #d9534f;
+}
+.pagination-container .dojump {
+    margin-left: 40px;
+}
+.pagination-container .dojump >span{
+    margin-right: 10px;
+}
+.pagination-container .dojump >input{
+    height: 34px;
+    width: 60px;
+}
+.pagination-container .dojump >a {
+    position: relative;
+    float: right;
+    padding: 6px 12px;
+    line-height: 1.42857;
+    text-decoration: none;
+    color: #428BCA;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    margin-left: -1px;
+}
+
+/*一行排列的样式*/
+.fl{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.martop20 {
+    margin-top: 20px;
+}
+.marginright15 {
+    margin-right: 15px;
+}
+.marginright5 {
+    margin-right: 5px;
+}
+.marginright50 {
+    margin-right: 50px;
+}
+.marginleft15 {
+    margin-left: 15px;
+}
+.marginleft5 {
+    margin-left: 5px;
+}
+.marginleft50 {
+    margin-left: 50px;
+}
+.dateinput-tag {
+    line-height: 34px;
+    height: 34px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*一行排列的下拉选项*/
+.select-online {
+    float: left;
+    margin-right: 10px;
+}
+.form-input:focus{
+    border-color: #66AFE9;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+.form-input{
+    display: block;
+    float: left;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    /*background-image: none;*/
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-span {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+}
+.pay-method .active{
+    border:2px #d9534f solid;
+}
+.form-a-borden:hover {
+    border:2px #d9534f solid;
+}
+
+.form-a-borden {
+    display: block;
+    float: left;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1.5px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-addbtn {
+    background-image: linear-gradient(to bottom, #51BBF5 0%, #0A95CC 100%);
+    background-repeat: repeat-x;
+    color: #FFF;
+    background-color: #5BC0DE;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    border-radius: 4px;
+    -moz-user-select: none;
+}
+.span-mastwriete{
+    float: left;
+    color: #ff0000;
+    height: 34px;
+    font-size: 14px;
+    margin-left: 5px;
+    line-height: 34px;
+}
+.span-comment{
+    float: left;
+    height: 34px;
+    font-size: 14px;
+    margin-left: 30px;
+    line-height: 34px;
+}
+.form-warning {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left: 30px;
+}
+.alert-gray {
+    background-image: linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 100%);
+    background-repeat: repeat-x;
+    /*border-color: #ddd;*/
+    padding-right: 10px;
+}
+.alert-gray-sj{
+    position:relative;
+    left:-16px; /* 圆角的位置需要细心调试哦 */
+    bottom:8px;
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px;
+    border-color:transparent #f0f0f0 transparent transparent;
+}
+
+/*.form-bottom-borden {*/
+    /*border-bottom: 1px solid #ddd;*/
+/*}*/
+.form-panel {
+    border:1px solid #ddd;
+    margin-bottom: 15px;
+}
+.form-panel .form-panel-content{
+    margin: 10px 20px;
+}
+.form-panel .pay-method{
+    margin-bottom: 15px;
+}
+.form-panel .pay-method-content >div:nth-last-child(2){
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+.form-panel .pay-method .fl >div{
+    float: left;
+}
+.form-panel .pay-method .fl >div >span{
+    margin-right: 30px;
+    height: 34px;
+    line-height: 34px;
+}
+.form-panel .pay-method .fl .form-input{
+    margin-right: 30px;
+}
+.form-panel .pay-method .fl >div >a{
+    margin-right: 20px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+.form-panel .df-span{
+    margin: 20px;
+    width: 200px;
+}
+.form-panel .sm-span{
+    margin-left: 10px;
+    font-size: 12px;
+}
+.book-pay-content .pay-money-span{
+    margin-bottom: 25px;
+}
+.book-pay-content .pay-money-span >span{
+    margin-left: 100px;
+    height: 34px;
+    line-height: 34px;
+}
+.book-pay-content .retund-money-span{
+    margin-bottom: 25px;
+}
+.book-pay-content .retund-money-span >span{
+    margin-left: 50px;
+    height: 34px;
+    line-height: 34px;
+}
+.book-pay-content .retund-money-span >a,
+.book-pay-content .retund-money-span >input{
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+.pay-method-content .pay-method .tradeiv,
+.pay-method-content .pay-method .balancediv{
+    display: none;
+}
+
+.pay-method-content .pay-method-trade .tradeiv,
+.pay-method-content .pay-method-balance .balancediv{
+    display: block;
+}
+
+.pay-method .add_class_time span{
+    position: absolute;
+    left: 20px;
+    top: -7px;
+    background: #5bc0de;
+    border: 1px solid #0a95cc;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.alertdiv {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+.textcenter {
+    text-align: center;
+}
+#select .course-content .attr .fvalues .v-fold .f-list > a {
+    max-width: 160px;
+}
+#select .course-content .v-fold {
+    overflow: inherit;
+}
+#select .course-content .v-fold {
+    overflow: inherit;
+}
+#select .nomore .v-fold {
+    overflow: inherit;
+}
+.add-project-center {
+    text-align: center;
+}
+.marginright {
+    margin-right: 15px;
+}
+.addfooter {
+    line-height: 34px;
+    height: 34px;
+}
+
+
+/*退费页面*/
+.retund-std-search {
+    border-bottom: 1px #ddd solid;
+    text-indent: 15px;
+}
+.retund-std-search >div{
+   float: left;
+}
+.retund-std-search >div >span{
+   height: 34px;
+   line-height: 34px;
+   margin-right: 20px;
+}
+.returninfo .spantitle{
+    margin-top: 30px;
+}
+
+.spancontent >div >div{
+    float: left;
+}
+.returninfo .spancontent .detailtitle{
+    margin-right: 30px;
+    /*width: 70px;*/
+}
+.returninfo .spancontent .detailcontent{
+    margin-right: 100px;
+    width: 150px;
+    text-align: left;
+}
+.retund-money .form-panel .pay-method{
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+.bordendiv {
+    border: 1px #ddd solid;
+}
+.selectCss {
+    border: 1px solid #CCC;
+    padding: 6px 12px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 4px;
+}
+.alert-indexshotcut {
+    background-color: #fafafa;
+    border-color: #DDD;
+    line-height: 30px;
+    box-shadow: 2px #DDD;
+}
+
+.alert-indexshotcut > a {
+    font-size: 18px;
+    color: #0066cc;
+    margin-bottom: 3px;
+}
+.alert-indexshotcut > n {
+    font-size: 25px;
+    margin-bottom: 3px;
+    color: #f00000;
+    margin-left: 10px;
+}
+.alert-indexshotcut > im {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.alert-indexshotcut > imj {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #000000;
+    margin-left: 10px;
+}
+.ui-jqgrid .ui-widget-content >td >a.label-info,
+.ui-jqgrid .ui-widget-content >td >a.label-warning,
+.ui-jqgrid .ui-widget-content >td >a.label-success,
+.ui-jqgrid .ui-widget-content >td >a.label-primary,
+.ui-jqgrid .ui-widget-content >td >a.label-danger{
+    color: #fff;
+    margin-right: 5px;
+}
+.btn-set {
+    position: relative;
+    z-index: 1030;
+}
+.btn-set.more {
+    border-top: 1px #ddd solid;
+    border-left: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+.btn-set .hidebtn{
+    display: none;
+}
+.input-search-muti.abs {
+    /*text-indent: 15px;*/
+    position: absolute;
+}
+.form-horizontal .morebtn {
+    border-top: 1px #ddd solid;
+    border-left: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    text-indent: 5px;
+}
+.form-horizontal .morebtn >a{
+    text-decoration: none;
+}
+/* 打印表格样式 */
+.table-css td { 
+	line-height: 30px;
+}
+.portrait {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  border-radius:50%; 
+  top: 0;
+  z-index: 1;
+}
+.f-list a:first-child{
+	margin-left:-70px;
+}
+#select .attr .fvalues .v-fold .f-list >a.selected {
+    background-color: #ff840d;
+    color: #fff;
+    border-radius: 0.25em;
+}
+#select .attr .fvalues{
+	margin: 5px 0;
+}
+#select .attr label{
+	line-height:35px;
+	margin-bottom:0;
+}
+#searchDiv{
+	font-size:12px;
+} 

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.skyfervor.rm</groupId>
+		<artifactId>registrationManager</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.skyfervor.rm.service.impl</groupId>
+	<artifactId>registrationManager-service-impl</artifactId>
+	<name>registrationManager-service-impl</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- framework -->
+		<dependency>
+			<groupId>com.skyfervor.framework</groupId>
+			<artifactId>framework-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.framework</groupId>
+			<artifactId>registrationManager-framework</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm.vo</groupId>
+			<artifactId>registrationManager-vo</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.service</groupId>
+			<artifactId>registrationManager-service</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.dao</groupId>
+			<artifactId>registrationManager-dao</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.dao.impl</groupId>
+			<artifactId>registrationManager-dao-impl</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- spring framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+	</dependencies>
+</project>

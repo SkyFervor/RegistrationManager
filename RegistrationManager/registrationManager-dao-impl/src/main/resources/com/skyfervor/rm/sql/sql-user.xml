@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="login-query-list">
+		<![CDATA[
+			SELECT
+			    userId,
+			    roleId,
+				userName,
+				password,
+				loginName,
+				status
+			FROM User
+			WHERE
+				enumDataEntityStatus = 0
+				#if($loginName)
+					AND loginName = :loginName
+				#end
+				#if($status)
+					AND status = :status
+				#end
+			ORDER BY loginName ASC
+		]]>
+	</query>
+
+	<query name="user-query-list">
+		<![CDATA[
+			SELECT
+			    userId,
+			    roleId,
+				userName,
+				loginName,
+				status
+			FROM User
+			WHERE
+				enumDataEntityStatus = 0
+				#if($userId)
+					AND userId = :userId
+				#end
+				#if($roleId)
+					AND roleId = :roleId
+				#end
+				#if($userName)
+					AND userName LIKE CONCAT('%', :userName, '%')
+				#end
+				#if($loginName)
+					AND loginName LIKE CONCAT('%', :loginName, '%')
+				#end
+				#if($status)
+					AND status = :status
+				#end
+			ORDER BY userName ASC
+		]]>
+	</query>
+
+</dynamic-hibernate>

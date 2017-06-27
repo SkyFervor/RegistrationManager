@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+#body {
+  	background: url(../images/body_bg.jpg) repeat-y;
+    width: 100%;
+}
+#top {
+     background: url(../images/top_bg.jpg) repeat-x;
+     height: 74px;
+}
+#left {
+	float: left;
+	width: 180px;
+}
+#right { 
+    float: left;
+    padding: 16px;
+}
+#bottom {
+    background:url(../images/bottom_bg.jpg) repeat-x;
+    height:25px;
+    padding-top:7px;
+    text-align:center;
+}
+/* 公共header，包含logo和登陆信息 start */
+.logo {
+  background: url(../images/logo_bg.png) no-repeat left center;
+  height: 60px;
+  width: 370px;
+  margin: 6px;
+  float: left;
+}
+/* 公共header，包含logo和登陆信息 end */
+
+/* 菜单部分 start */
+#menutitle {
+    background:url(../images/menutitle_bg.jpg);
+    height:38px;
+    width:175px;
+    margin:3px;
+}
+#menu,#user{ width:162px; margin:auto; }
+#menu img{ vertical-align:middle;}
+#menu li{ list-style:none;}
+#menu ul{ padding-left:0;margin-left:0;}
+#menu a{ text-decoration:none;}
+#menu a.title:link,#menu a.title:visited,#menu a.title2:link,#menu a.title2:visited{display:block;padding:5px 0 0 10px;}
+#menu a.title:link,#menu a.title:visited{color:#327099; font-weight:bold; height:22px; background:url(../images/menubg_4.gif) no-repeat;}
+#menu a.title:hover{ color:#62A2CC; background-position:left -27px;}
+#menu .item ul {display:none; padding-top:3px;}
+#menu .item { margin:0 auto 2px auto;}
+#menu .item ul,#menu .item{ width:162px; float:left;}
+#menu .item ul li {height:27px;line-height:24px;float:left;}
+#menu .item ul li a{ border:1px solid #D1EEFC; background:#F7FCFF;font-size:12px;color:#000;}
+#menu .item ul li a:hover{color:#555; border:1px solid #CCC; background:#F7F7F7;}
+#menu .item ul li a.itemselected{ color:#AC4E0F!important; border:1px solid #F5D298!important; background:#FFFBE6!important;}
+#menu .item ul li a,#menu .item ul li a:hover,.itemselected{float:left;width:150px;padding-left:10px; margin-bottom:1px;}
+/* 菜单部分 end */
+
+table, tr, th, td {border: 1px solid #ddd;padding: 0}

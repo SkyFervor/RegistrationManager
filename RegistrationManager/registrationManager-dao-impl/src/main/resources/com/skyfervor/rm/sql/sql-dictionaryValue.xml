@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dynamic-hibernate>
+	<query name="dictionaryValue-query-list">
+		<![CDATA[
+			SELECT
+				v.dictionaryValueId,
+				t.dictionaryTypeId,
+				t.name AS dictionaryTypeName,
+				t.description AS dictionaryTypeDesc,
+				v.name,
+				v.description,
+				v.value,
+				v.indexId,
+				v.display,
+				v.modify
+			FROM DictionaryValue v
+			RIGHT JOIN DictionaryType t
+			ON
+				v.dictionaryTypeId = t.dictionaryTypeId
+				AND v.enumDataEntityStatus = 0
+			WHERE
+				t.enumDataEntityStatus = 0
+				#if($dictionaryTypeName)
+					AND t.name LIKE CONCAT('%', :dictionaryTypeName, '%')
+				#end
+				#if($name)
+					AND v.name LIKE CONCAT('%', :name, '%')
+				#end
+				#if($display)
+					AND v.display = :display
+				#end
+			ORDER BY
+				dictionaryTypeId DESC,
+				indexId ASC 
+		]]>
+	</query>
+</dynamic-hibernate>

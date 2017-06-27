@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.skyfervor.rm</groupId>
+		<artifactId>registrationManager</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.skyfervor.rm.dao.impl</groupId>
+	<artifactId>registrationManager-dao-impl</artifactId>
+	<name>registrationManager-dao-impl</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.skyfervor.framework</groupId>
+			<artifactId>framework-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.framework</groupId>
+			<artifactId>registrationManager-framework</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm.vo</groupId>
+			<artifactId>registrationManager-vo</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.dao</groupId>
+			<artifactId>registrationManager-dao</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skyfervor.rm.model</groupId>
+			<artifactId>registrationManager-model</artifactId>
+			<version>${registrationManager.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- spring framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+		</dependency>
+	</dependencies>
+</project>

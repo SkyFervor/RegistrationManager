@@ -1,0 +1,152 @@
+.header-navbar-px {
+    min-width: 380px;
+}
+.page-container {
+    min-width: 380px;
+}
+
+/***
+
+Page header
+***/
+.header .navbar-inner .container-fluid,
+.header .navbar-inner .container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.header .top-nav .nav{
+    margin-top: 0px;
+    margin-right: 5px;
+}
+
+.header .nav > li > .dropdown-menu.notification:after,
+.header .nav > li > .dropdown-menu.notification:before {
+    margin-right: 180px;
+}
+
+.header .nav > li > .dropdown-menu.notification {
+    margin-right: -180px;
+}
+
+.header .nav > li > .dropdown-menu.inbox:after,
+.header .nav > li > .dropdown-menu.inbox:before {
+    margin-right: 140px;
+}
+
+.header .nav > li > .dropdown-menu.inbox {
+    margin-right: -140px;
+}
+
+.header .nav > li > .dropdown-menu.tasks:after,
+.header .nav > li > .dropdown-menu.tasks:before {
+    margin-right: 90px;
+}
+
+.header .nav > li > .dropdown-menu.tasks {
+    margin-right: -90px;
+}
+
+/* Header logo */
+.header .brand {
+    margin-left: 0px !important;
+    width: 110px;
+}
+
+/***
+Page content
+***/
+.page-content {
+    /*padding: 10px !important;*/
+}
+
+/***
+Page title
+***/
+.page-title {
+    margin-bottom: 20px;
+}
+
+/***
+Styler pagel
+***/
+.styler-panel {
+    top:58px;
+    right:12px;
+}
+
+/***
+Page breadcrumb
+***/
+.breadcrumb {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/***
+Portlet form action
+***/
+.portlet-body.form .form-actions{
+    padding-left: 15px;
+}
+
+/***
+Gritter notification
+***/
+#gritter-notice-wrapper {
+    right:1px !important;
+}
+
+/***
+Form input validation states
+***/
+.input-icon .input-error,
+.input-icon .input-warning,
+.input-icon .input-success {
+    top:-27px;
+    float: right;
+    right:10px !important;
+}
+
+/***
+Advance tables
+***/
+.table-advance tr td.highlight:first-child a {
+    margin-left: 8px;
+}
+
+/***
+Footer
+***/
+.footer {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer .go-top {
+    float: right;
+    display: block;
+    margin-right: 0px;
+}
+
+/***
+Vertical inline menu
+***/
+.ver-inline-menu li.active:after {
+    display: none;
+}
+
+/***
+Form controls
+***/
+.form-horizontal .form-actions {
+    padding-left: 180px;
+}
+
+.portlet .form-horizontal .form-actions {
+    padding-left: 190px;
+}
+
+.dateinput {
+    background:url(../images/calendar-i.png) no-repeat scroll right 10px center transparent;
+}
