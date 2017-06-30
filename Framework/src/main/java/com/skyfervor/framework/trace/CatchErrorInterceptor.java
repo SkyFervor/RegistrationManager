@@ -21,7 +21,7 @@ public class CatchErrorInterceptor implements MethodInterceptor {
 			return invocation.proceed();
 		} catch (Throwable e) {
 			if (!(e instanceof CatchErrorException)) {
-				logger.error("CatchError -> catch exception -> {} throw a Exception:{}, invoke stack:{}, param:{}, trace key:{}", TraceInterceptor.getInvoke(), e, TraceInterceptor.getTraceStackToString(), JsonTranslator.toString(invocation.getArguments()), TraceInterceptor.getTraceKey());
+				logger.error("CatchError -> catch exception -> {} throw a Exception:{}, invoke stack:{}, param:{}", invocation.getMethod(), e, e.getStackTrace(), JsonTranslator.toString(invocation.getArguments()));
 				throw new CatchErrorException(e.getMessage(), e.getCause());
 			}
 			throw e;
