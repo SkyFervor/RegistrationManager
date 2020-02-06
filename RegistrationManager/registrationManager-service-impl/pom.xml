@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>registrationManager-service-impl</artifactId>
 
 	<parent>
 		<groupId>com.skyfervor.rm</groupId>
@@ -10,49 +11,27 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.skyfervor.rm.service.impl</groupId>
-	<artifactId>registrationManager-service-impl</artifactId>
-	<name>registrationManager-service-impl</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-vo</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-dao-impl</artifactId>
+		</dependency>
 		<!-- framework -->
 		<dependency>
 			<groupId>com.skyfervor.framework</groupId>
 			<artifactId>framework-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.skyfervor.rm.framework</groupId>
-			<artifactId>registrationManager-framework</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.skyfervor.rm.vo</groupId>
-			<artifactId>registrationManager-vo</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.skyfervor.rm.service</groupId>
-			<artifactId>registrationManager-service</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.skyfervor.rm.dao</groupId>
-			<artifactId>registrationManager-dao</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.skyfervor.rm.dao.impl</groupId>
-			<artifactId>registrationManager-dao-impl</artifactId>
-			<version>${registrationManager.version}</version>
 		</dependency>
 
 		<dependency>
@@ -103,10 +82,10 @@
 			<artifactId>gson</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>2.2.1</version>
-        </dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.1</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.skyfervor.rm</groupId>
 	<artifactId>registrationManager</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>registrationManager</name>
-	<url>http://maven.apache.org</url>
-
 	<modules>
 		<module>registrationManager-dao</module>
 		<module>registrationManager-dao-impl</module>
-		<module>registrationManager-framework</module>
 		<module>registrationManager-service</module>
 		<module>registrationManager-service-impl</module>
 		<module>registrationManager-model</module>
@@ -26,29 +21,59 @@
 	</modules>
 
 	<properties>
-		<registrationManager.name>registrationManager</registrationManager.name>
-
-		<registrationManager.version>1.0-SNAPSHOT</registrationManager.version>
-		<registrationManager.framework.version>1.0-SNAPSHOT</registrationManager.framework.version>
-		<registrationManager.dao.version>1.0-SNAPSHOT</registrationManager.dao.version>
-		<registrationManager.dao.impl.version>1.0-SNAPSHOT</registrationManager.dao.impl.version>
-		<registrationManager.service.version>1.0-SNAPSHOT</registrationManager.service.version>
-		<registrationManager.service.impl.version>1.0-SNAPSHOT</registrationManager.service.impl.version>
-		<registrationManager.model.version>1.0-SNAPSHOT</registrationManager.model.version>
-		<registrationManager.vo.version>1.0-SNAPSHOT</registrationManager.vo.version>
-		<registrationManager.web.version>1.0-SNAPSHOT</registrationManager.web.version>
-		<registrationManager.controller.version>1.0-SNAPSHOT</registrationManager.controller.version>
-		<registrationManager.app.version>1.0-SNAPSHOT</registrationManager.app.version>
-
 		<org.springframework.version>4.1.6.RELEASE</org.springframework.version>
 		<spring-rabbit-virsion>1.4.5.RELEASE</spring-rabbit-virsion>
 		<axis2-virsion>1.6.2</axis2-virsion>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-app</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-controller</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-dao-impl</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-service-impl</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-vo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.skyfervor.rm</groupId>
+				<artifactId>registrationManager-web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 			<!-- framework -->
 			<dependency>
 				<groupId>com.skyfervor.framework</groupId>
@@ -511,16 +536,11 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<executions>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		 xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>registrationManager-web</artifactId>
+	<packaging>war</packaging>
 
 	<parent>
 		<groupId>com.skyfervor.rm</groupId>
@@ -9,36 +11,19 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.skyfervor.rm.web</groupId>
-	<artifactId>registrationManager-web</artifactId>
-	<packaging>war</packaging>
-	<name>registrationManager-web</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-controller</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-service</artifactId>
+		</dependency>
 		<!-- framework -->
 		<dependency>
 			<groupId>com.skyfervor.framework</groupId>
 			<artifactId>framework-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.skyfervor.rm.framework</groupId>
-			<artifactId>registrationManager-framework</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.skyfervor.rm.web.controller</groupId>
-			<artifactId>registrationManager-controller</artifactId>
-			<version>${registrationManager.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.skyfervor.rm.service</groupId>
-			<artifactId>registrationManager-service</artifactId>
-			<version>${registrationManager.version}</version>
 		</dependency>
 
 		<dependency>
