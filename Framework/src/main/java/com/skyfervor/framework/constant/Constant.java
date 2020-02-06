@@ -1,7 +1,5 @@
 package com.skyfervor.framework.constant;
 
-import java.util.Date;
-
 public class Constant {
 
 	public static final long DefaultTime = -2209017600000L; // 默认时间1900-01-01 00:00:00
@@ -14,11 +12,9 @@ public class Constant {
 	}
 
 	public static class Cookie {
-		public static final int AGE = 60 * 60 * 2; // 有效期
 		public static final String NAME_USERID = "userId"; // 用户ID对应的cookie名
 		public static final String NAME_USERNAME = "userName"; // 用户UserName对应的cookie名
 		public static final String NAME_TOKEN = "token"; // 登录Token对应的cookie名
-		public static final String TOKEN_SALT = new Date().toString(); // 加密盐
 	}
 
 	public class Login {
