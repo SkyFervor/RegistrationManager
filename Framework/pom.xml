@@ -10,13 +10,11 @@
 	<name>framework-core</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
+	<packaging>jar</packaging>
 
+	<properties>
 		<org.springframework.version>4.1.6.RELEASE</org.springframework.version>
 		<com.fasterxml.jackson.core>2.7.4</com.fasterxml.jackson.core>
-		<spring-rabbit-virsion>1.4.5.RELEASE</spring-rabbit-virsion>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 	</properties>
 
 	<dependencies>
@@ -146,7 +144,7 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
-			<version>${spring-rabbit-virsion}</version>
+			<version>1.4.5.RELEASE</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -170,12 +168,12 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.6.0-rc3</version>
+			<version>${com.fasterxml.jackson.core}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.6.0-rc3</version>
+			<version>${com.fasterxml.jackson.core}</version>
 		</dependency>
 
 		<dependency>
@@ -220,22 +218,11 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>
