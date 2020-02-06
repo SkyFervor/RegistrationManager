@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.skyfervor.rm.schedule;
 
 import java.util.Date;
@@ -118,7 +115,7 @@ public class ActivityReportUpdateJob {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"classpath:com/skyfervor/rm/service/rm-service-bean.xml");
+				"classpath:com/skyfervor/rm/service/context.xml");
 		ActivityReportUpdateJob job = context.getBean(ActivityReportUpdateJob.class);
 		job.setBegin("2016-01-01");
 		job.run();

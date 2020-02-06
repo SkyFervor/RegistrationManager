@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- dubbo -->
+	<dubbo:application name="registrationManager-web"/>
+	<dubbo:registry address="zookeeper://192.168.170.2:2181"/>
+	<dubbo:protocol name="dubbo"/>
+	<dubbo:monitor protocol="registry"/>
+	<dubbo:consumer timeout="60000" check="false"/>
+
+	<!-- 引用服务接口 -->
+	<dubbo:reference interface="com.skyfervor.rm.service.ActivityService" id="activityService"/>
+	<dubbo:reference interface="com.skyfervor.rm.service.ActivityUserMappingService" id="activityUserMappingService"/>
+	<dubbo:reference interface="com.skyfervor.rm.service.ActivityReportService" id="activityReportService"/>
+	<dubbo:reference interface="com.skyfervor.framework.dictionary.DictionaryService" id="dictionaryService"/>
+	<dubbo:reference interface="com.skyfervor.framework.user.UserService" id="userService"/>
+	<dubbo:reference interface="com.skyfervor.framework.user.RoleService" id="roleService"/>
+	<dubbo:reference interface="com.skyfervor.framework.user.PermissionService" id="permissionService"/>
+	<dubbo:reference interface="com.skyfervor.framework.usertodo.UserTodoService" id="userTodoService"/>
+</beans>

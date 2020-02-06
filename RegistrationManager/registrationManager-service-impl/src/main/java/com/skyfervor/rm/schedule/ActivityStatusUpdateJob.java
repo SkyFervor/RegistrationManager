@@ -97,7 +97,7 @@ public class ActivityStatusUpdateJob {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:com/skyfervor/rm/service/rm-service-bean.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:com/skyfervor/rm/service/context.xml");
 		ActivityStatusUpdateJob job = context.getBean(ActivityStatusUpdateJob.class);
 		job.run();
 		System.exit(0);

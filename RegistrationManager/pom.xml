@@ -17,7 +17,6 @@
 		<module>registrationManager-web</module>
 		<module>registrationManager-controller</module>
 		<module>registrationManager-app</module>
-		<module>assembly</module>
 	</modules>
 
 	<properties>
@@ -502,41 +501,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<profiles>
-		<profile>
-			<id>dev</id>
-			<build>
-				<filters>
-					<filter>${user.dir}/assembly/src/profile/env.properties.dev</filter>
-				</filters>
-			</build>
-		</profile>
-		<profile>
-			<id>test</id>
-			<build>
-				<filters>
-					<filter>${user.dir}/assembly/src/profile/env.properties.test</filter>
-				</filters>
-			</build>
-		</profile>
-		<profile>
-			<id>image</id>
-			<build>
-				<filters>
-					<filter>${user.dir}/assembly/src/profile/env.properties.image</filter>
-				</filters>
-			</build>
-		</profile>
-		<profile>
-			<id>product</id>
-			<build>
-				<filters>
-					<filter>${user.dir}/assembly/src/profile/env.properties.product</filter>
-				</filters>
-			</build>
-		</profile>
-	</profiles>
 
 	<build>
 		<plugins>

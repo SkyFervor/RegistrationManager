@@ -15,7 +15,7 @@ public class ActivityServiceTest {
 
 	@Before
 	public void before() {
-		ctx = new ClassPathXmlApplicationContext("bean/rm-app-bean.xml");
+		ctx = new ClassPathXmlApplicationContext("context/common.xml");
 	}
 
 	@Test

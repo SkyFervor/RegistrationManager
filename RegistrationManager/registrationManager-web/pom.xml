@@ -20,6 +20,10 @@
 			<groupId>com.skyfervor.rm</groupId>
 			<artifactId>registrationManager-service</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.skyfervor.rm</groupId>
+			<artifactId>registrationManager-service-impl</artifactId>
+		</dependency>
 		<!-- framework -->
 		<dependency>
 			<groupId>com.skyfervor.framework</groupId>
@@ -128,6 +132,44 @@
 			<artifactId>poi</artifactId>
 		</dependency>
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>online</id>
+			<properties>
+				<conf-dir>online</conf-dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/profiles/online</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<conf-dir>local</conf-dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/profiles/local</directory>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<finalName>registrationManager-web</finalName>

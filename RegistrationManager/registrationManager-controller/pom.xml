@@ -20,10 +20,6 @@
 			<artifactId>registrationManager-service</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.skyfervor.rm</groupId>
-			<artifactId>registrationManager-service-impl</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>com.skyfervor.framework</groupId>
 			<artifactId>framework-core</artifactId>
 		</dependency>
