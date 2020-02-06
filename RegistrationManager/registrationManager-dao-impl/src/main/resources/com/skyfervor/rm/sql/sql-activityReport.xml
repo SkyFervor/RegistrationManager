@@ -40,7 +40,8 @@
 		<![CDATA[
 			SELECT
 				distinct activityId,
-				activityName
+				activityName,
+				activityTime
 			FROM ActivityReport
 			ORDER BY activityTime DESC
 		]]>
@@ -50,7 +51,7 @@
 		<![CDATA[
 			SELECT
 				COUNT(userId) as count,
-				userName
+				ANY_VALUE(userName) as userName
 			FROM ActivityReport
 			WHERE
 				1 = 1
@@ -72,8 +73,8 @@
 		<![CDATA[
 			SELECT
 				COUNT(activityId) as count,
-				activityName,
-				activityTime
+				ANY_VALUE(activityName) as activityName,
+				MAX(activityTime) as activityTime
 			FROM ActivityReport
 			WHERE
 				1 = 1

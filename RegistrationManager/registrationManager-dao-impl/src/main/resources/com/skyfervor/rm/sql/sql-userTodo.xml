@@ -9,7 +9,8 @@
 				bdUserId,
 				bdUserName,
 				associatedDataId,
-				readTime
+				readTime,
+				lastUpdateTime
 			FROM UserTodo
 			WHERE
 				enumDataEntityStatus = 0

@@ -218,6 +218,12 @@
 				<version>8.0.23</version>
 				<scope>provided</scope>
 			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>28.2-jre</version>
+			</dependency>
 			<!-- PropertyUtils -->
 			<dependency>
 				<groupId>commons-beanutils</groupId>

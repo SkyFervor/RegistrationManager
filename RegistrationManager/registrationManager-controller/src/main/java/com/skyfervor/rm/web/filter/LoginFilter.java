@@ -104,11 +104,11 @@ public class LoginFilter implements Filter {
 
 		try {
 			// 获取用户信息
-			Long userId = Long.valueOf(cookieUserId.getValue());
+			long userId = Long.parseLong(cookieUserId.getValue());
 			UserVo userVo = userService.queryLoginById(userId);
 
 			// 验证Token
-			String token = TokenUtils.getToken(userVo.getPassword(), Constant.Cookie.TOKEN_SALT);
+			String token = TokenUtils.getToken(userVo.getPassword(), userVo.getCreateTime().toString());
 			if (!StringUtils.IsEquals(token, cookieToken.getValue()))
 				return false;
 
@@ -124,7 +124,6 @@ public class LoginFilter implements Filter {
 	/**
 	 * 权限验证
 	 * 
-	 * @param roleId
 	 * @param url
 	 * @return
 	 */

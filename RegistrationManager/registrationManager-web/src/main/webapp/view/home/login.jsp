@@ -34,10 +34,8 @@
 
 	function getEncryption(loginName, password, auth) {
 		hexcase = 1; // MD5插件设置，大写输出
-		var str1 = hex_md5(password);
-		var str2 = hex_md5(str1 + loginName);
-		var str3 = hex_md5(str2 + auth.toUpperCase());
-		return str3;
+		var md5_password = hex_md5(password);
+		return hex_md5(md5_password + auth.toUpperCase());
 	}
 
 	function login() {
