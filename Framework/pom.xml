@@ -10,7 +10,7 @@
 
 	<properties>
 		<org.springframework.version>4.1.6.RELEASE</org.springframework.version>
-		<com.fasterxml.jackson.core>2.10.2</com.fasterxml.jackson.core>
+		<com.fasterxml.jackson.core>2.12.1</com.fasterxml.jackson.core>
 	</properties>
 
 	<dependencies>
